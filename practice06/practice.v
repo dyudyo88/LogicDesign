@@ -19,6 +19,8 @@
 //	--------------------------------------------------
 //	0~59 Counter
 //	--------------------------------------------------
+
+
 module cnt60(	o_cnt60,
 		clk,
 		rst_n		);
@@ -64,8 +66,8 @@ input		rst_n		;
 
 
 
-reg		[31:0]	cnt			;
-reg				o_gen_clk	;
+reg	[31:0]	cnt		;
+reg		o_gen_clk	;
 
 always @(posedge clk or negedge rst_n) begin
 	if(rst_n == 1'b0) begin
@@ -99,7 +101,7 @@ input	[31:0]	i_nco_num		;
 input		clk			;
 input		rst_n			;
 
-wire			gen_clk		;
+wire		gen_clk			;
 
 nco	u_nco(	.o_gen_clk	( gen_clk	),
 		.i_nco_num	( i_nco_num	),
@@ -143,16 +145,16 @@ endmodule
 //	--------------------------------------------------
 //	0~59 --> 2 Separated Segments
 //	--------------------------------------------------
-module	double_fig_sep(		o_left,
-				o_right,
-				i_double_fig);
+module	double_fig_sep(	o_left,
+			o_right,
+			i_double_fig);
 
 output	[3:0]	o_left		;
 output	[3:0]	o_right		;
 
-input	[5:0]	i_double_fig;
+input	[5:0]	i_double_fig	;
 
-assign	o_left = i_double_fig / 10;
+assign	o_left	 = i_double_fig / 10;
 assign	o_right  = i_double_fig % 10;
 
 endmodule
@@ -168,9 +170,9 @@ module	led_disp(	o_seg,
 			clk,
 			rst_n);
 
-output	[5:0]	o_seg_enb		;
-output		o_seg_dp		;
-output	[6:0]	o_seg			;
+output	[5:0]	o_seg_enb	;
+output		o_seg_dp	;
+output	[6:0]	o_seg		;
 
 
 input	[41:0]	i_six_digit_seg	;
@@ -181,18 +183,19 @@ input		rst_n		;
 wire		gen_clk		;
 
 nco		u_nco(	.o_gen_clk	( gen_clk		),
-			.i_nco_num	( 32'd50000	),
+			.i_nco_num	( 32'd50000		),
 			.clk		( clk			),
 			.rst_n		( rst_n			));
 
 
 reg		[3:0]	cnt_common_node	;
+
 always @(posedge gen_clk or negedge rst_n) begin
 	if(rst_n == 1'b0) begin
-		cnt_common_node		<= 32'd0;
+		cnt_common_node	<= 32'd0;
 	end else begin
 		if(cnt_common_node >= 4'd5) begin
-			cnt_common_node 	<= 4'd0;
+			cnt_common_node <= 4'd0;
 		end else begin
 			cnt_common_node <= cnt_common_node + 1'b1;
 		end
@@ -200,7 +203,7 @@ always @(posedge gen_clk or negedge rst_n) begin
 end
 
 
-reg		[5:0]	o_seg_enb		;
+reg		[5:0]	o_seg_enb	;
 always @(cnt_common_node) begin
 	case (cnt_common_node)
 		4'd0 : o_seg_enb = 6'b111110;
@@ -212,7 +215,7 @@ always @(cnt_common_node) begin
 	endcase
 end
 
-reg				o_seg_dp		;
+reg			o_seg_dp	;
 always @(cnt_common_node) begin
 	case (cnt_common_node)
 		4'd0 : o_seg_dp = i_six_dp[0];
@@ -224,7 +227,7 @@ always @(cnt_common_node) begin
 	endcase
 end
 
-reg		[6:0]	o_seg			;
+reg		[6:0]	o_seg;
 always @(cnt_common_node) begin
 	case (cnt_common_node)
 		4'd0 : o_seg = i_six_digit_seg[6:0];
@@ -241,10 +244,10 @@ endmodule
 //	--------------------------------------------------
 //	Top Module
 //	--------------------------------------------------
-module	top_nco_cnt_disp(	o_seg_enb,
-				o_seg_dp,
-				o_seg,
-				clk,
+module	top_nco_cnt_disp(	o_seg_enb	,
+				o_seg_dp	,
+				o_seg		,
+				clk		,
 				rst_n		);
 
 output	[5:0]	o_seg_enb	;
@@ -257,41 +260,41 @@ input		rst_n		;
 
 wire	[5:0]	nco_cnt		;
 nco_cnt		u_nco_cnt(	
-				.o_nco_cnt	(nco_cnt),
-				.i_nco_num	(32'd50000000),
-				.clk		(clk),
+				.o_nco_cnt	(nco_cnt)	,
+				.i_nco_num	(32'd50000000)	,
+				.clk		(clk)		,
 				.rst_n		(rst_n)		);
 
 
 wire	[3:0]	u0_fnd_dec	;
 wire	[3:0]	u1_fnd_dec	;
 double_fig_sep	u_dfs(	
-				.o_left		(u0_fnd_dec),
-				.o_right	(u1_fnd_dec),
-				.i_double_fig	(nco_cnt)		);
+				.o_left		(u0_fnd_dec)	,
+				.o_right	(u1_fnd_dec)	,
+				.i_double_fig	(nco_cnt)	);
 
 wire	[6:0]	seg_left	;
 wire	[6:0]	seg_right	;
 fnd_dec		u0_find_dec(	
-				.o_seg	(seg_left),
+				.o_seg	(seg_left)	,
 				.i_num	(u0_fnd_dec)	);
 
 fnd_dec		u1_find_dec(	
-				.o_seg	(seg_right),
+				.o_seg	(seg_right)	,
 				.i_num	(u1_fnd_dec)	);
 
 
-wire	[41:0]	six_digit_seg;
+wire	[41:0]	six_digit_seg						;
 assign		six_digit_seg = { {4{7'b0000000} }, seg_left, seg_right};
 
 led_disp	u_fnd_dec(
-				.o_seg		(o_seg),
-				.o_seg_dp	(o_seg_dp),
-				.o_seg_enb	(o_seg_enb),
-				.i_six_digit_seg(six_digit_seg),
-				.i_six_dp	(6'd000000),
-				.clk		(clk),
-				.rst_n		(rst_n)	);
+				.o_seg		(o_seg)		,
+				.o_seg_dp	(o_seg_dp)	,
+				.o_seg_enb	(o_seg_enb)	,
+				.i_six_digit_seg(six_digit_seg)	,
+				.i_six_dp	(6'd000000)	,
+				.clk		(clk)		,
+				.rst_n		(rst_n)		);
 
 
 endmodule
