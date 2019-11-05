@@ -12,7 +12,7 @@
 
  ```verilog 
  wire  [41:0] six_digit_seg; 
- assign       six_digit_seg = { 4{7'b0000000}, seg_left, seg_right }
+ assign       six_digit_seg = { 4{7'b0000000}, seg_left, seg_right };
  ``` 
  
 > Q1 - 고정 LED (왼쪽 4개) AAAA 출력 : `AA_AA_00`, `AA_AA_01`, `AA_AA_02`, … 순으로 LED 변경
@@ -34,5 +34,9 @@ assign	six_digit_seg = { seg_left, seg_right ,seg_left, seg_right , seg_left, se
 ![](https://github.com/dyudyo88/LogicDesign/blob/master/practice06/%EC%BA%A1%EC%B2%98.PNG)
 
 ### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
-`Please fill up your source`
 
+일반
+ 
+Q1
+
+Q2
