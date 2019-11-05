@@ -13,7 +13,7 @@
 ## 퀴즈 ### 아래 코드 일부를 수정하여 다음을 구하시오 ```verilog wire  [41:0] six_digit_seg; assign       six_digit_seg = { 4{7'b0000000}, seg_left, seg_right } ``` 
 > Q1 - 고정 LED (왼쪽 4개) AAAA 출력 : `AA_AA_00`, `AA_AA_01`, `AA_AA_02`, … 순으로 LED 변경
 `Please fill up your source`
-assign		six_digit_seg = { {4{7'b0000000} },  seg_left, seg_right};
+assign		six_digit_seg = { {4{7'b1110111} },  seg_left, seg_right};
 > Q2 - 고정 LED 없이 2개의 LED 단위로 1초 Counter 값 표시 : `00_00_00`, `01_01_01`, `02_02_02`, … 순으로 LED 변경
 `Please fill up your source`
 assign	six_digit_seg = { seg_left, seg_right ,seg_left, seg_right , seg_left, seg_right};
@@ -23,6 +23,6 @@ assign	six_digit_seg = { seg_left, seg_right ,seg_left, seg_right , seg_left, se
 `Please fill up your source`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3ODYwOTUxMywxMDM4OTk3NjI1LC0xOT
-Q4NDczNDk5LC02NDE2MTU0ODZdfQ==
+eyJoaXN0b3J5IjpbNDM1MDYyNzU5LDEwMzg5OTc2MjUsLTE5ND
+g0NzM0OTksLTY0MTYxNTQ4Nl19
 -->
