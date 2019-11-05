@@ -36,7 +36,7 @@ assign	six_digit_seg = { seg_left, seg_right ,seg_left, seg_right , seg_left, se
 ### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
 
 일반
- 
+![](https://github.com/dyudyo88/LogicDesign/blob/master/picture/%EC%9D%BC%EB%B0%981.jpeg)
 Q1
 
 Q2
