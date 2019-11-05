@@ -16,13 +16,13 @@
 assign		six_digit_seg = { {4{7'b0000000} },  seg_left, seg_right};
 > Q2 - 고정 LED 없이 2개의 LED 단위로 1초 Counter 값 표시 : `00_00_00`, `01_01_01`, `02_02_02`, … 순으로 LED 변경
 `Please fill up your source`
-assign		six_digit_seg = { seg_left, seg_right ,seg_left, seg_right , seg_left, seg_right};
+assign	six_digit_seg = { seg_left, seg_right ,seg_left, seg_right , seg_left, seg_right};
 ## 결과 ### **Top Module 의 DUT/TestBench Code 및 Waveform 검증**
 `Please fill up your source`
 ### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
 `Please fill up your source`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE2NzM5MDg5LDEwMzg5OTc2MjUsLTE5ND
-g0NzM0OTksLTY0MTYxNTQ4Nl19
+eyJoaXN0b3J5IjpbMTY3ODYwOTUxMywxMDM4OTk3NjI1LC0xOT
+Q4NDczNDk5LC02NDE2MTU0ODZdfQ==
 -->
