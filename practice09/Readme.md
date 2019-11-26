@@ -195,11 +195,13 @@ endmodule
 
 ![](https://github.com/dyudyo88/LogicDesign/blob/master/practice09/capture.PNG)#####WAVE분석
  초반의 웨이브는 Leader code, 중반의 웨이브는 Custom Code,  후반부의 웨이브는 Date Code를 나타낸다.
- Leader code는 프레임의 모드를 선택하고, Custom Code는 특정회사의 주파수를 나타낸다 마지막으로 Date Code
+ Leader code는 프레임의 모드를 선택하고, Custom Code는 특정회사의 주파수를 나타낸다 마지막으로 Date Code는 송신데이터이다.
+ leader code를 제외한 custom code(16 bits)와 Data code(16 bits)는 총32bits이다.
+ 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA0NzMyNjA0LDEyMzg3NDgwNzgsLTE2OT
-Y4NTIxMzksMTYwNTg1NTk1NSwtMjAwNTUxMjc0OF19
+eyJoaXN0b3J5IjpbLTEzMjM2OTUyNjYsMTIzODc0ODA3OCwtMT
+Y5Njg1MjEzOSwxNjA1ODU1OTU1LC0yMDA1NTEyNzQ4XX0=
 -->
