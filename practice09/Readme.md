@@ -88,13 +88,14 @@ always @(posedge clk_1M or negedge rst_n) begin
 			end
 			DATACODE: begin
 				if (seq_rx == 2'b01) begin
-				//seg_rx=2'b01 =>이전값이 0, 현재값ㅇ
+				//seg_rx=2'b01 =>이전값이 0, 현재값이 1
 					cnt32 <= cnt32 + 1;
+					//한 번 증가할때마다 1이 증가 => cnt32가 32가 되어야 complete된다.
 				end else begin
 					cnt32 <= cnt32;
 				end
 				if (cnt32 >= 6'd32 && cnt_l >= 1000) begin
-					state <= COMPLETE;
+//카운트 low값이 1000이되면 complete					state <= COMPLETE;
 				end else begin
 					state <= DATACODE;
 				end
@@ -192,6 +193,6 @@ led_disp u_led_disp(
 endmodule
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzQ2NjY1MjUsMTYwNTg1NTk1NSwtMj
+eyJoaXN0b3J5IjpbLTE2OTY4NTIxMzksMTYwNTg1NTk1NSwtMj
 AwNTUxMjc0OF19
 -->
