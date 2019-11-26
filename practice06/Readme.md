@@ -47,4 +47,10 @@ Q1
 
 Q2
 ![](https://github.com/dyudyo88/LogicDesign/blob/master/picture/quiz2-1.jpeg)
-![](https://github.com/dyudyo88/LogicDesign/blob/master/picture/quiz2-2.jpeg)
+![](https://github.com/dyudyo88/LogicDesign/blob/master/picture/quiz2-2.jpeg)`Please fill up your source`
+### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
+`Please fill up your source`
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTcyNDk0ODYwN119
+-->
