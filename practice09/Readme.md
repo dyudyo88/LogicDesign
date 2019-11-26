@@ -13,12 +13,12 @@ always @(posedge clk_1M or negedge rst_n) begin
 	if(rst_n == 1'b0) begin 
 		seq_rx <= 2'b00;
 	end else begin
-		seq_rx <= {seq_rx[0], ir_rx};
+		seq_rx <= {seq_rx[0], ir_rx}; //seq_rx[0] : 전, ir_rx : 현재
 	end 
 end
  ```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDU1MTI3NDhdfQ==
+eyJoaXN0b3J5IjpbLTM4NzI3NTUyNiwtMjAwNTUxMjc0OF19
 -->
