@@ -198,10 +198,11 @@ endmodule
  Leader code는 프레임의 모드를 선택하고, Custom Code는 특정회사의 주파수를 나타낸다 마지막으로 Date Code는 송신데이터이다.
  leader code를 제외한 custom code(16 bits)와 Data code(16 bits)는 총32bits이다.
  
-
+Leader code 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjM2OTUyNjYsMTIzODc0ODA3OCwtMT
-Y5Njg1MjEzOSwxNjA1ODU1OTU1LC0yMDA1NTEyNzQ4XX0=
+eyJoaXN0b3J5IjpbLTY3NjY4Nzk4LC0xMzIzNjk1MjY2LDEyMz
+g3NDgwNzgsLTE2OTY4NTIxMzksMTYwNTg1NTk1NSwtMjAwNTUx
+Mjc0OF19
 -->
