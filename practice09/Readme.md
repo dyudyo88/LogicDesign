@@ -79,7 +79,8 @@ always @(posedge clk_1M or negedge rst_n) begin
 				cnt32 <= 6'd0;
 			end
 			LEADCODE: begin
-				if (cnt_h >= 8500 && cnt_l >= 4000) begin
+				if (cnt_h >= 8500 && cnt_l >= 4000) 
+				begin
 					state <= DATACODE;
 				end else begin
 					state <= LEADCODE;
@@ -190,5 +191,6 @@ led_disp u_led_disp(
 endmodule
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNTg1NTk1NSwtMjAwNTUxMjc0OF19
+eyJoaXN0b3J5IjpbMjQyMDI5NzcsMTYwNTg1NTk1NSwtMjAwNT
+UxMjc0OF19
 -->
