@@ -193,8 +193,11 @@ led_disp u_led_disp(
 endmodule
 ```
 
-![](https://github.com/dyudyo88/LogicDesign/blob/master/practice09/capture.PNG)
+![](https://github.com/dyudyo88/LogicDesign/blob/master/practice09/capture.PNG)#####WAVE분석
+ 초반의 웨이브는 Leader code, 중반의 웨이브는 Custom 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzODc0ODA3OCwtMTY5Njg1MjEzOSwxNj
-A1ODU1OTU1LC0yMDA1NTEyNzQ4XX0=
+eyJoaXN0b3J5IjpbNTM4NDU1NjQzLDEyMzg3NDgwNzgsLTE2OT
+Y4NTIxMzksMTYwNTg1NTk1NSwtMjAwNTUxMjc0OF19
 -->
