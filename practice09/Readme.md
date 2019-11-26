@@ -80,7 +80,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 			end
 			LEADCODE: begin
 				if (cnt_h >= 8500 && cnt_l >= 4000) begin
-				//카운트 하이(cnt_h)가 9000이 아니라 8500에서 hi로 하고 4ms로 low하면 리더코드가 완성됐으므로 인식하고 시작
+				//카운트 하이(cnt_h)가 9000이 아니라 8500에서 high하는 것으로 하고 4ms로 low하면 리더코드가 완성됐으므로 인식하고 시작
 					state <= DATACODE;
 				end else begin
 					state <= LEADCODE;
@@ -88,6 +88,7 @@ always @(posedge clk_1M or negedge rst_n) begin
 			end
 			DATACODE: begin
 				if (seq_rx == 2'b01) begin
+				//seg_rx=2'b01 =>이전값이 0, 현재값ㅇ
 					cnt32 <= cnt32 + 1;
 				end else begin
 					cnt32 <= cnt32;
@@ -191,6 +192,6 @@ led_disp u_led_disp(
 endmodule
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTc4ODk5NCwxNjA1ODU1OTU1LC0yMD
-A1NTEyNzQ4XX0=
+eyJoaXN0b3J5IjpbLTE4NzQ2NjY1MjUsMTYwNTg1NTk1NSwtMj
+AwNTUxMjc0OF19
 -->
