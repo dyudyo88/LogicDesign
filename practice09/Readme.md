@@ -192,7 +192,9 @@ led_disp u_led_disp(
 
 endmodule
 ```
+
+![](https://github.com/dyudyo88/LogicDesign/blob/master/practice09/capture.PNG)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTY4NTIxMzksMTYwNTg1NTk1NSwtMj
-AwNTUxMjc0OF19
+eyJoaXN0b3J5IjpbMTIzODc0ODA3OCwtMTY5Njg1MjEzOSwxNj
+A1ODU1OTU1LC0yMDA1NTEyNzQ4XX0=
 -->
