@@ -193,17 +193,17 @@ led_disp u_led_disp(
 endmodule
 ```
 
-![](https://github.com/dyudyo88/LogicDesign/blob/master/practice09/capture.PNG)#####WAVE분석
+![](https://github.com/dyudyo88/LogicDesign/blob/master/practice09/capture.PNG)WAVE분석
  초반의 웨이브는 Leader code, 중반의 웨이브는 Custom Code,  후반부의 웨이브는 Date Code를 나타낸다.
  Leader code는 프레임의 모드를 선택하고, Custom Code는 특정회사의 주파수를 나타낸다 마지막으로 Date Code는 송신데이터이다.
  leader code를 제외한 custom code(16 bits)와 Data code(16 bits)는 총32bits이다.
  
 Leader code Wave를 보면 처음은 9ms로 길고, 그 다음은 4.5ms로 상대적으로 작다.
-그리고 리
+그리고 리모컨신호랑 그대로 반대가 되는신호가 있는데 반대가 되는신호는 리가 임의로 뒤집어준 신호이다
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTU0NzkxMTYsLTY3NjY4Nzk4LC0xMz
-IzNjk1MjY2LDEyMzg3NDgwNzgsLTE2OTY4NTIxMzksMTYwNTg1
-NTk1NSwtMjAwNTUxMjc0OF19
+eyJoaXN0b3J5IjpbMTI2Njk2NjA1OSwtNjc2Njg3OTgsLTEzMj
+M2OTUyNjYsMTIzODc0ODA3OCwtMTY5Njg1MjEzOSwxNjA1ODU1
+OTU1LC0yMDA1NTEyNzQ4XX0=
 -->
