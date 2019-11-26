@@ -199,10 +199,11 @@ endmodule
  leader code를 제외한 custom code(16 bits)와 Data code(16 bits)는 총32bits이다.
  
 Leader code Wave를 보면 처음은 9ms로 길고, 그 다음은 4.5ms로 상대적으로 작다.
+그리고 리
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5ODg2NzY5OCwtNjc2Njg3OTgsLTEzMj
-M2OTUyNjYsMTIzODc0ODA3OCwtMTY5Njg1MjEzOSwxNjA1ODU1
-OTU1LC0yMDA1NTEyNzQ4XX0=
+eyJoaXN0b3J5IjpbLTEwMTU0NzkxMTYsLTY3NjY4Nzk4LC0xMz
+IzNjk1MjY2LDEyMzg3NDgwNzgsLTE2OTY4NTIxMzksMTYwNTg1
+NTk1NSwtMjAwNTUxMjc0OF19
 -->
